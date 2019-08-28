@@ -29,6 +29,8 @@
   },
   "homepage": "https://zerosoul.github.io/react-starter",
   "dependencies": {
+    "copy-to-clipboard": "^3.2.0",
+    "crypto-random-string": "^3.0.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "styled-components": "^4.3.2",

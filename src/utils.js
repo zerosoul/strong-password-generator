@@ -1,26 +1,17 @@
-export function shuffle(array) {
-  let counter = array.length;
-  console.log('shuffle', array);
+import cryptoRandomString from 'crypto-random-string';
 
-  // While there are elements in the array
-  while (counter > 0) {
-    // Pick a random index
-    let index = Math.floor(Math.random() * counter);
+const Numbers = '0123456789';
 
-    // Decrease counter by 1
-    counter--;
+const Symbols = '!@~#$%&*^?';
 
-    // And swap the last element with it
-    let temp = array[counter];
-    array[counter] = array[index];
-    array[index] = temp;
-  }
+const Chars = 'qwertyuiopasdfghjklzxcvbnm';
+const UpperCaseChars = Chars.toUpperCase();
 
-  return array;
-}
+export const getPwd = (length = 4, { letter, number, symbol, uppercase }) => {
+  const characters = `${number ? Numbers : ''}${symbol ? Symbols : ''}${letter ? Chars : ''}${
+    letter && uppercase ? UpperCaseChars : ''
+  }`;
 
-export function getTimeFormated(count, zh = false) {
-  return zh
-    ? `${String(Math.floor(count / 60))}分${String(count % 60)}秒`
-    : `${String(Math.floor(count / 60)).padStart(2, '0')}:${String(count % 60).padStart(2, '0')}`;
-}
+  return cryptoRandomString({ length, characters });
+};
+// export { getPwd };
