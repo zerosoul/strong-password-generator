@@ -100,6 +100,7 @@ const Dashboard = ({ length = 4, letter, uppercase, symbol, number, updateOpts }
           <input
             type="checkbox"
             onChange={handleChange}
+            disabled={!number}
             checked={letter}
             name="letter"
             id="letters"
@@ -109,8 +110,9 @@ const Dashboard = ({ length = 4, letter, uppercase, symbol, number, updateOpts }
         <div className="cb-wrapper">
           <input
             type="checkbox"
+            disabled={!letter}
             onChange={handleChange}
-            checked={uppercase}
+            checked={letter && uppercase}
             name="uppercase"
             id="mixed"
           />
@@ -130,6 +132,7 @@ const Dashboard = ({ length = 4, letter, uppercase, symbol, number, updateOpts }
           <input
             type="checkbox"
             onChange={handleChange}
+            disabled={!letter}
             checked={number}
             name="number"
             id="numbers"
