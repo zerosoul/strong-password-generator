@@ -23,6 +23,7 @@ const StyledWrapper = styled.section`
     .output {
       color: #fff;
       font-size: 1.8rem;
+      /* font-size: 3.5vw; */
       padding: 0.3rem 0;
     }
     .btns {
@@ -78,7 +79,13 @@ const Output = ({ pwd, updatePwd, length }) => {
           </button>
         </div>
       </div>
-      <i className="tip">strong password</i>
+      {length < 6 ? (
+        <i className="tip">bad password</i>
+      ) : length < 11 ? (
+        <i className="tip">weak password</i>
+      ) : (
+        <i className="tip">strong password</i>
+      )}
     </StyledWrapper>
   );
 };
