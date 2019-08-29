@@ -7,7 +7,7 @@ const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
   background: #318800;
-  padding: 2rem 4rem;
+  padding: 2rem 3rem;
   transition: background 0.5s;
   &.alert {
     background: #c81a00;
@@ -88,7 +88,7 @@ const Output = ({ pwd, updatePwd, length }) => {
     setCopied(true);
     setTimeout(() => {
       setCopied(false);
-    }, 1000);
+    }, 600);
   };
   return (
     <StyledWrapper

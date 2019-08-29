@@ -32,12 +32,12 @@ const StyledWrapper = styled.section`
     .cbs {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       .cb-wrapper {
         margin: 0.5rem 0;
         /* margin-left: 1rem; */
         input[type='checkbox'] {
           opacity: 0;
-          width: 1rem;
           + label {
             position: relative;
             cursor: pointer;
@@ -45,6 +45,7 @@ const StyledWrapper = styled.section`
               content: '';
               position: absolute;
               left: -22px; /* 这个后面会调整 */
+              top: 0;
               border-radius: 2px;
               border: 1px solid #2196f3;
               width: 18px;
@@ -66,7 +67,7 @@ const StyledWrapper = styled.section`
             + label::after {
               content: 'ヘ';
               background: #2196f3;
-              font-size: 0.8rem;
+              font-size: 18px;
               color: #fff;
             }
           }
