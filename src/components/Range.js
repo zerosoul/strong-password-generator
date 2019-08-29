@@ -3,9 +3,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
   .range-slider__range {
     -webkit-appearance: none;
-    width: calc(100% - 73px);
+    width: calc(100% - 30vw);
     height: 10px;
     border-radius: 5px;
     background: #d7dcdf;
