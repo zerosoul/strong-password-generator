@@ -11,9 +11,9 @@ import { getPwd } from './utils';
 // `;
 const App = () => {
   const [opts, setOpts] = useState({
-    length: 4,
+    length: 12,
     letter: true,
-    number: false,
+    number: true,
     symbol: true,
     uppercase: true
   });
