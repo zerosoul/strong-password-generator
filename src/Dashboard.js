@@ -43,6 +43,7 @@ const StyledWrapper = styled.section`
             cursor: pointer;
             &::before {
               content: '';
+              transition: all 0.5s;
               position: absolute;
               left: -22px; /* 这个后面会调整 */
               top: 0;
@@ -54,6 +55,7 @@ const StyledWrapper = styled.section`
             }
             &::after {
               content: '';
+              transition: all 0.5s;
               transform: rotateX(180deg);
               position: absolute;
               left: -20px;
@@ -80,6 +82,10 @@ const StyledWrapper = styled.section`
             + label::before {
               border: 1px solid #ddd;
               box-shadow: 0 0px 4px #ddd;
+            }
+            + label::after {
+              background: #aaa;
+              color: #eee;
             }
           }
         }

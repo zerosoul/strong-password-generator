@@ -7,7 +7,7 @@ const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
   background: #318800;
-  padding: 2rem 3rem;
+  padding: 2rem 2.2rem;
   transition: background 0.5s;
   &.alert {
     background: #c81a00;
@@ -28,6 +28,8 @@ const StyledWrapper = styled.section`
     .output {
       color: #fff;
       font-size: 1.8rem;
+      font-size: 4.8vw;
+      line-height: 1.2;
       padding: 0.3rem 0;
       word-break: break-all;
     }
@@ -39,6 +41,10 @@ const StyledWrapper = styled.section`
         border: none;
         background: none;
         cursor: pointer;
+        transition: transform 0.3s;
+        &:active {
+          transform: scale(1.2);
+        }
       }
     }
   }

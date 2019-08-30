@@ -2,41 +2,48 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.header`
+  position: relative;
+  overflow: hidden;
+  background: #4b706a;
   > h1 {
     font-size: 2rem;
     line-height: 1.2;
-    color: #4caf50;
+    color: #fff;
     padding: 2.4rem 0;
     text-align: center;
     font-weight: 800;
     text-transform: uppercase;
-    position: relative;
+    text-shadow: 0 0 6px #9e9e9e;
+  }
+  .ribbon-wrapper {
+    width: 85px;
+    height: 88px;
+    overflow: hidden;
+    position: absolute;
+    top: -3px;
+    left: -3px;
     .ribbon {
-      /* content: 'online'; */
-      color: #4caf50;
-      font-size: 0.5rem;
-      width: 1.5rem;
-      height: 1.5rem;
-      display: flex;
-      position: absolute;
-      top: 20px;
-      border-radius: 50%;
-      right: 54px;
-      padding: 0.4rem;
-      justify-content: center;
-      align-items: center;
-      transform: rotate(25deg);
-      background: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      position: relative;
+      padding: 8px 0;
+      transform: rotate(-45deg);
+      font-size: 0.8rem;
       font-weight: 800;
+      top: 15px;
+      left: -30px;
+      width: 120px;
+      background-color: #318800;
+      color: #fff;
     }
   }
 `;
 export default function Header() {
   return (
     <Wrapper>
-      <h1>
-        strong passwords generator <i className="ribbon">online</i>
-      </h1>
+      <h1>strong passwords generator</h1>
+      <div className="ribbon-wrapper">
+        <div className="ribbon">ONLINE</div>
+      </div>
     </Wrapper>
   );
 }

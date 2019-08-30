@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const Wrapper = styled.footer`
   background: #333;
-  padding: 2rem 3rem;
   .dls {
     display: flex;
     flex-wrap: wrap;
@@ -15,20 +14,20 @@ const Wrapper = styled.footer`
       margin: 1rem;
       width: 10rem;
       dt {
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight: 800;
         color: #fff;
         margin-bottom: 0.4rem;
       }
       dd {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         color: #fff;
         margin-bottom: 0.4rem;
-        padding-left: 0.4rem;
+        padding-left: 0.5rem;
         position: relative;
         ::before {
-          content: '- ';
-          color: #ddd;
+          content: '-';
+          color: #999;
           position: absolute;
           left: 0;
         }
