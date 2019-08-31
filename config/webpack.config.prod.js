@@ -4,6 +4,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const merge = require('webpack-merge');
 const commonConfig = require('./webpack.config.common');
 const paths = require('./paths');
+const { GenerateSW } = require('workbox-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
@@ -57,6 +58,9 @@ module.exports = merge(commonConfig, {
     new BundleAnalyzerPlugin({
       openAnalyzer: false,
       analyzerMode: 'static'
+    }),
+    new GenerateSW({
+      // Config options, if needed.
     })
   ],
   optimization: {
