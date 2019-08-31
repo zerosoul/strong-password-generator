@@ -7,6 +7,7 @@ const paths = require('./paths');
 const { GenerateSW } = require('workbox-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const publicUrl = paths.servedPath;
 
 // 以下是生产环境的配置项，目标是为了打包出体积更小、更合理的资源文件
 module.exports = merge(commonConfig, {
@@ -60,7 +61,19 @@ module.exports = merge(commonConfig, {
       analyzerMode: 'static'
     }),
     new GenerateSW({
-      // Config options, if needed.
+      clientsClaim: true,
+      exclude: [/\.map$/, /asset-manifest\.json$/],
+      importWorkboxFrom: 'cdn',
+      navigateFallback: publicUrl + '/index.html',
+      navigateFallbackBlacklist: [
+        // Exclude URLs starting with /_, as they're likely an API call
+        new RegExp('^/_'),
+        // Exclude any URLs whose last part seems to be a file extension
+        // as they're likely a resource and not a SPA route.
+        // URLs containing a "?" character won't be blacklisted as they're likely
+        // a route with query params (e.g. auth callbacks).
+        new RegExp('/[^/?]+\\.[^/]+$')
+      ]
     })
   ],
   optimization: {
