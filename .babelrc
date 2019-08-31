@@ -5,6 +5,7 @@
       {
         "modules": false,
         "corejs": 3,
+        "useBuiltIns": false,
         "targets": {
           "chrome": 60
         }
