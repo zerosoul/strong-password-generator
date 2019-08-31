@@ -33,8 +33,9 @@ const StyledWrapper = styled.section`
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      max-width: 28rem;
       .cb-wrapper {
-        margin: 0.5rem 0;
+        margin: 0.5rem 0.2rem;
         /* margin-left: 1rem; */
         input[type='checkbox'] {
           opacity: 0;
@@ -46,7 +47,7 @@ const StyledWrapper = styled.section`
               transition: all 0.5s;
               position: absolute;
               left: -22px; /* 这个后面会调整 */
-              top: 0;
+              top: -2px;
               border-radius: 2px;
               border: 1px solid #2196f3;
               width: 18px;
@@ -59,7 +60,7 @@ const StyledWrapper = styled.section`
               transform: rotateX(180deg);
               position: absolute;
               left: -20px;
-              top: 2px;
+              top: 0;
               border-radius: 2px;
               width: 16px;
               height: 16px;

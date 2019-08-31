@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Wrapper = styled.header`
   position: relative;
   overflow: hidden;
-  background: #4b706a;
+  /* background: #4b706a; */
   > h1 {
     font-size: 2rem;
     line-height: 1.2;
@@ -16,18 +16,18 @@ const Wrapper = styled.header`
     text-shadow: 0 0 6px #9e9e9e;
   }
   .ribbon-wrapper {
-    width: 85px;
+    width: 94px;
     height: 88px;
     overflow: hidden;
     position: absolute;
-    top: -3px;
-    left: -3px;
+    top: 0;
+    left: 0;
     .ribbon {
       text-align: center;
       position: relative;
       padding: 8px 0;
       transform: rotate(-45deg);
-      font-size: 0.8rem;
+      font-size: 0.6rem;
       font-weight: 800;
       top: 15px;
       left: -30px;

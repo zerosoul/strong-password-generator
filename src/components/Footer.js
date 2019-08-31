@@ -3,16 +3,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.footer`
-  background: #333;
   .dls {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     dl {
       display: flex;
       flex-direction: column;
       line-height: 1.4;
       margin: 1rem;
-      width: 10rem;
+      width: 12rem;
       dt {
         font-size: 1rem;
         font-weight: 800;
@@ -33,12 +33,17 @@ const Wrapper = styled.footer`
         }
       }
     }
+    > i {
+      width: 12rem;
+      margin: 1rem;
+    }
   }
   .copyright {
     font-size: 0.6rem;
     text-align: center;
     width: 100%;
     display: flex;
+    justify-content: center;
     padding: 0.8rem;
     border-top: 1px solid rgba(0, 0, 0, 0.15);
     span {
@@ -74,6 +79,9 @@ export default function Footer() {
           <dt>What's the solution?</dt>
           <dd>Generate and store strong passwords!</dd>
         </dl>
+        <i></i>
+        <i></i>
+        <i></i>
       </div>
       <div className="copyright">
         <span>

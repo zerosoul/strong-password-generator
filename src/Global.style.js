@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
+import BodyBg from './assets/img/circuit-board.svg';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -21,10 +22,11 @@ const GlobalStyle = createGlobalStyle`
     margin:0 auto;
     min-height:100vh;
     position: relative;
+    background-color: #4b706a;
+   background-image:url(${BodyBg});
   }
   #root{
     min-height:100vh;
-    background-image:linear-gradient(135deg, rgb(96, 108, 136) 0%, rgb(63, 76, 107) 100%);
   }
 
   @media screen and (min-width: 320px){
