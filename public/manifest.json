@@ -1,6 +1,6 @@
 {
-  "short_name": "Memory Game",
-  "name": "Frontend Logo Memory Game",
+  "short_name": "Password Generator",
+  "name": "Strong Password Generator",
   "icons": [
     {
       "src": "apple-touch-icon.png",
