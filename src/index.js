@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import GlobalStyle from './Global.style';
-
+import { register } from './registerServiceWorker';
 ReactDOM.render(
   <>
     <GlobalStyle />
@@ -10,3 +10,4 @@ ReactDOM.render(
   </>,
   document.getElementById('root')
 );
+register();
