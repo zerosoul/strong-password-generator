@@ -15,7 +15,8 @@ const App = () => {
     letter: true,
     number: true,
     symbol: true,
-    uppercase: true
+    uppercase: true,
+    excludeSimilar: true
   });
   const [currPwd, setCurrPwd] = useState(getPwd(opts.length, opts));
   const updateOpts = newOpts => {

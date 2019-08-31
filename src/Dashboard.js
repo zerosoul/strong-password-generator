@@ -6,10 +6,7 @@ const StyledWrapper = styled.section`
   flex-direction: column;
   background: #fff;
   padding: 2rem;
-  .tip {
-    font-size: 1rem;
-    margin-bottom: 0.8rem;
-  }
+
   .length {
     display: flex;
     flex-direction: column;
@@ -31,12 +28,12 @@ const StyledWrapper = styled.section`
     }
     .cbs {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       flex-wrap: wrap;
       max-width: 28rem;
       .cb-wrapper {
         margin: 0.5rem 0.2rem;
-        /* margin-left: 1rem; */
+        margin-right: 1rem;
         input[type='checkbox'] {
           opacity: 0;
           + label {
@@ -94,7 +91,15 @@ const StyledWrapper = styled.section`
     }
   }
 `;
-const Dashboard = ({ length = 4, letter, uppercase, symbol, number, updateOpts }) => {
+const Dashboard = ({
+  length = 4,
+  letter,
+  uppercase,
+  symbol,
+  number,
+  excludeSimilar,
+  updateOpts
+}) => {
   const handleChange = ({ target: ele }) => {
     console.log('wtf', ele.name, ele.checked);
     updateOpts({ [ele.name]: ele.checked });
@@ -105,12 +110,8 @@ const Dashboard = ({ length = 4, letter, uppercase, symbol, number, updateOpts }
   };
   return (
     <StyledWrapper>
-      <div className="tip">
-        Slide the slider, and select the options below, to lengthen your password and strengthen
-        your security.
-      </div>
       <div className="length">
-        <h2 className="tip">Length (4-32)</h2>
+        <h2 className="tip">Password Length (4-32)</h2>
         <SliderRange onChange={handleLengthChange} value={length} />
       </div>
       <div className="opts">
@@ -158,6 +159,16 @@ const Dashboard = ({ length = 4, letter, uppercase, symbol, number, updateOpts }
               id="numbers"
             />
             <label htmlFor="numbers">Numbers</label>
+          </div>
+          <div className="cb-wrapper">
+            <input
+              type="checkbox"
+              onChange={handleChange}
+              checked={excludeSimilar}
+              name="excludeSimilar"
+              id="excludeSimilar"
+            />
+            <label htmlFor="excludeSimilar">Exclude Similar</label>
           </div>
         </div>
       </div>

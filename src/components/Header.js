@@ -1,15 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Logo from '../assets/img/icon.png';
 const Wrapper = styled.header`
   position: relative;
   overflow: hidden;
   /* background: #4b706a; */
+  .logo {
+    width: 6rem;
+    margin: 0 auto;
+    display: block;
+    margin-top: 1rem;
+    border-radius: 50%;
+    box-shadow: -1px 8px 20px 0px #2c2d2d;
+  }
   > h1 {
     font-size: 2rem;
     line-height: 1.2;
     color: #fff;
     padding: 2.4rem 0;
+    padding-top: 1.4rem;
     text-align: center;
     font-weight: 800;
     text-transform: uppercase;
@@ -40,6 +49,7 @@ const Wrapper = styled.header`
 export default function Header() {
   return (
     <Wrapper>
+      <img className="logo" src={Logo} alt="logo" />
       <h1>strong passwords generator</h1>
       <div className="ribbon-wrapper">
         <div className="ribbon">ONLINE</div>

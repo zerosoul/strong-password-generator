@@ -27,11 +27,13 @@ const StyledWrapper = styled.section`
 
     .output {
       color: #fff;
+      font-weight: 800;
       font-size: 1.8rem;
       font-size: 4.8vw;
       line-height: 1.2;
       padding: 0.3rem 0;
       word-break: break-all;
+      text-shadow: -1px 3px 3px #295626;
     }
     .btns {
       color: #ddd;

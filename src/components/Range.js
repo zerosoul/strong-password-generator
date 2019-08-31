@@ -32,7 +32,7 @@ const Wrapper = styled.div`
       background: #219699;
     }
 
-    &::-moz-range-thumb {
+    &:range-thumb {
       width: 20px;
       height: 20px;
       border: 0;
@@ -46,7 +46,7 @@ const Wrapper = styled.div`
       }
     }
 
-    &:active::-moz-range-thumb {
+    &:active:range-thumb {
       background: #219699;
     }
     &:focus {
@@ -81,13 +81,13 @@ const Wrapper = styled.div`
     }
   }
 
-  ::-moz-range-track {
+  :range-track {
     background: #d7dcdf;
     border: 0;
   }
 
-  input::-moz-focus-inner,
-  input::-moz-focus-outer {
+  input:focus-inner,
+  input:focus-outer {
     border: 0;
   }
 `;
