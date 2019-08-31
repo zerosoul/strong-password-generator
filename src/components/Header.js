@@ -43,6 +43,7 @@ const Wrapper = styled.header`
       width: 120px;
       background-color: #318800;
       color: #fff;
+      box-shadow: 1px 1px 14px 0px #174007;
     }
   }
 `;

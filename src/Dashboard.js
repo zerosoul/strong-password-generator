@@ -6,7 +6,7 @@ const StyledWrapper = styled.section`
   flex-direction: column;
   background: #fff;
   padding: 2rem;
-
+  box-shadow: 0px 7px 15px 1px #0b210a;
   .length {
     display: flex;
     flex-direction: column;
