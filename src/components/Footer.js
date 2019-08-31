@@ -3,6 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.footer`
+  padding-top: 4rem;
+  background: rgba(22, 22, 22, 0.2);
   .dls {
     display: flex;
     justify-content: center;
