@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "PUBLIC_URL=strong-password-generator node scripts/build.js",
     "deploy": "npm run build && gh-pages -d build",
     "changelog": "auto-changelog -p --release-summary -l false --template changelog.template.hbs && git add CHANGELOG.md"
   },
@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/zerosoul/strong-password-generator/issues"
   },
-  "homepage": "https://zerosoul.github.io/strong-password-generator",
+  "homepage": "https://works.yangerxiao.com/strong-password-generator",
   "dependencies": {
     "copy-to-clipboard": "^3.2.0",
     "crypto-random-string": "^3.0.1",
