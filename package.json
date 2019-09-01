@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node scripts/start.js",
-    "build": "PUBLIC_URL=strong-password-generator node scripts/build.js",
+    "build": "PUBLIC_URL='.' node scripts/build.js",
     "deploy": "npm run build && gh-pages -d build",
     "changelog": "auto-changelog -p --release-summary -l false --template changelog.template.hbs && git add CHANGELOG.md"
   },
