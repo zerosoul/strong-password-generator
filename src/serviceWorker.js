@@ -55,8 +55,10 @@ export function register(config) {
 }
 
 function registerValidSW(swUrl, config) {
+  console.log('reg swUrl', swUrl);
+
   navigator.serviceWorker
-    .register(swUrl)
+    .register(swUrl, { scope: './strong-password-generator' })
     .then(registration => {
       registration.onupdatefound = () => {
         const installingWorker = registration.installing;
