@@ -1,6 +1,7 @@
 {
   "name": "Password Generator",
   "short_name": "Strong Password Generator",
+  "start_url": "./index.html",
   "icons": [
     {
       "src": "android-chrome-192x192.png",
