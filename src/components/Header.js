@@ -29,6 +29,14 @@ const Wrapper = styled.header`
     position: absolute;
     top: 1rem;
     right: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.2rem;
+    padding-bottom: 0.3rem;
+    select {
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-align-last: center;
+    }
   }
   .ribbon-wrapper {
     width: 94px;
