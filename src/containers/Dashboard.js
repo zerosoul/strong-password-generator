@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import SliderRange from './components/Range';
+import { useMobile } from '../hooks';
+import SliderRange from '../components/Range';
 const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
   background: #fff;
-  padding: 2rem;
+  padding: 2rem 7rem;
   box-shadow: 0px 7px 15px 1px #0b210a;
+  &.mobile {
+    padding: 2rem;
+  }
   .length {
     display: flex;
     flex-direction: column;
@@ -100,6 +104,7 @@ const Dashboard = ({
   excludeSimilar,
   updateOpts
 }) => {
+  const { isMobile } = useMobile();
   const handleChange = ({ target: ele }) => {
     console.log('wtf', ele.name, ele.checked);
     updateOpts({ [ele.name]: ele.checked });
@@ -109,7 +114,7 @@ const Dashboard = ({
     updateOpts({ length: Number(ele.value) });
   };
   return (
-    <StyledWrapper>
+    <StyledWrapper className={isMobile ? 'mobile' : ''}>
       <div className="length">
         <h2 className="tip">Password Length (4-32)</h2>
         <SliderRange onChange={handleLengthChange} value={length} />

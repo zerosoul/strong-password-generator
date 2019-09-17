@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import copy from 'copy-to-clipboard';
-import { RefreshIcon, CopyIcon } from './components/Icons';
+import { useMobile } from '../hooks';
+
+import { RefreshIcon, CopyIcon } from '../components/Icons';
 
 const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
   background: #318800;
-  padding: 2rem 2.2rem;
+  padding: ${({ mobile }) => (mobile ? `2rem 2.2rem` : `2rem 7.4rem`)};
   transition: background 0.5s;
   &.alert {
     background: #c81a00;
@@ -80,6 +82,7 @@ const StyledWrapper = styled.section`
 `;
 
 const Output = ({ pwd, updatePwd, length }) => {
+  const { isMobile } = useMobile();
   const [copied, setCopied] = useState(false);
   const [updated, setUpdated] = useState(false);
   const handleUpdateClick = () => {
@@ -100,6 +103,7 @@ const Output = ({ pwd, updatePwd, length }) => {
   };
   return (
     <StyledWrapper
+      mobile={isMobile}
       className={length < 6 ? 'alert' : length < 11 ? 'warning' : length < 15 ? 'strong' : null}
     >
       <div className="pwd">
