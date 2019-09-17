@@ -102,9 +102,20 @@ const Dashboard = ({
   symbol,
   number,
   excludeSimilar,
-  updateOpts
+  updateOpts,
+  optsTxt
 }) => {
   const { isMobile } = useMobile();
+  const {
+    length: lengthTxt,
+    opt: optTxt,
+    number: numberTxt,
+    letter: letterTxt,
+    mixCase,
+    punc,
+    similar
+  } = optsTxt;
+
   const handleChange = ({ target: ele }) => {
     console.log('wtf', ele.name, ele.checked);
     updateOpts({ [ele.name]: ele.checked });
@@ -116,11 +127,11 @@ const Dashboard = ({
   return (
     <StyledWrapper className={isMobile ? 'mobile' : ''}>
       <div className="length">
-        <h2 className="tip">Password Length (4-32)</h2>
+        <h2 className="tip">{lengthTxt} (4-32)</h2>
         <SliderRange onChange={handleLengthChange} value={length} />
       </div>
       <div className="opts">
-        <h2>Options</h2>
+        <h2>{optTxt}</h2>
         <div className="cbs">
           <div className="cb-wrapper">
             <input
@@ -131,7 +142,7 @@ const Dashboard = ({
               name="letter"
               id="letters"
             />
-            <label htmlFor="letters">Letters</label>
+            <label htmlFor="letters">{letterTxt}</label>
           </div>
           <div className="cb-wrapper">
             <input
@@ -142,7 +153,7 @@ const Dashboard = ({
               name="uppercase"
               id="mixed"
             />
-            <label htmlFor="mixed">Mixed case</label>
+            <label htmlFor="mixed">{mixCase}</label>
           </div>
           <div className="cb-wrapper">
             <input
@@ -152,7 +163,7 @@ const Dashboard = ({
               name="symbol"
               id="symbols"
             />
-            <label htmlFor="symbols">Punctuation</label>
+            <label htmlFor="symbols">{punc}</label>
           </div>
           <div className="cb-wrapper">
             <input
@@ -163,7 +174,7 @@ const Dashboard = ({
               name="number"
               id="numbers"
             />
-            <label htmlFor="numbers">Numbers</label>
+            <label htmlFor="numbers">{numberTxt}</label>
           </div>
           <div className="cb-wrapper">
             <input
@@ -173,7 +184,7 @@ const Dashboard = ({
               name="excludeSimilar"
               id="excludeSimilar"
             />
-            <label htmlFor="excludeSimilar">Exclude Similar</label>
+            <label htmlFor="excludeSimilar">{similar}</label>
           </div>
         </div>
       </div>

@@ -1,0 +1,77 @@
+{
+  "zh": {
+    "name": "zh",
+    "title": "密码生成器",
+    "pwdLevelTip": {
+      "bad": "弱爆了 👎",
+      "weak": "有点弱 🙂",
+      "strong": "还可以 👌",
+      "veryStrong": "超级强 👍"
+    },
+    "opts": {
+      "length": "密码长度",
+      "opt": "组合选项",
+      "number": "数字",
+      "letter": "字母",
+      "mixCase": "大小写",
+      "punc": "标点符号",
+      "similar": "排除相似字符"
+    },
+    "footer": [
+      {
+        "title": "您是否用过以下弱爆了的密码？😒",
+        "list": ["Password", "123456", "Qwerty", "生日/孩子名字", "始终使用同一个密码"]
+      },
+      {
+        "title": "您的密码为啥弱爆了？🤔",
+        "list": ["太容易被人猜中了😤", "一旦其中一个被人破解了，其他平台统统被攻破！😧"]
+      },
+      {
+        "title": "有啥子解决办法？😎",
+        "list": ["快使用超强密码生成器！嘿嘿哈嘿~ 😋"]
+      }
+    ]
+  },
+  "en": {
+    "name": "en",
+    "title": "strong passwords generator",
+    "pwdLevelTip": {
+      "bad": "bad password 👎",
+      "weak": "weak password 🙂",
+      "strong": "strong password 👌",
+      "veryStrong": "very strong password 👍"
+    },
+    "opts": {
+      "length": "Password Length",
+      "opt": "Options",
+      "number": "Numbers",
+      "letter": "Letters",
+      "mixCase": "Mixed case",
+      "punc": "Punctuation",
+      "similar": "Exclude Similar"
+    },
+    "footer": [
+      {
+        "title": "Do you use any of these weak passwords?",
+        "list": [
+          "Password",
+          "123456",
+          "Qwerty",
+          "Your child's name",
+          "Always use the same password"
+        ]
+      },
+      {
+        "title": "Why are those passwords weak?",
+        "list": [
+          "They're easy to guess or crack. Really easy!",
+          "If one of your logins is compromised, a hacker then has access to all your services."
+        ]
+      },
+      {
+        "title": "What's the solution?",
+        "list": ["Generate and store strong passwords!"]
+      }
+    ]
+  }
+}

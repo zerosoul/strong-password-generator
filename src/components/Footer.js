@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import styled from 'styled-components';
-
 const Wrapper = styled.footer`
   padding-top: 4rem;
   background: rgba(22, 22, 22, 0.2);
@@ -58,29 +57,20 @@ const Wrapper = styled.footer`
     }
   }
 `;
-export default function Footer() {
+export default function Footer({ arts }) {
   return (
     <Wrapper>
       <div className="dls">
-        <dl>
-          <dt>Do you use any of these weak passwords?</dt>
-          <dd>Password</dd>
-          <dd>123456</dd>
-          <dd>Qwerty</dd>
-          <dd>Your child's name</dd>
-          <dd>always use the same password</dd>
-        </dl>
-        <dl>
-          <dt>Why are those passwords weak?</dt>
-          <dd>They're easy to guess or crack. Really easy!</dd>
-          <dd>
-            If one of your logins is compromised, a hacker then has access to all your services.
-          </dd>
-        </dl>
-        <dl>
-          <dt>What's the solution?</dt>
-          <dd>Generate and store strong passwords!</dd>
-        </dl>
+        {arts.map(art => {
+          return (
+            <dl key={art.title}>
+              <dt>{art.title}</dt>
+              {art.list.map(item => {
+                return <dd key={item}>{item}</dd>;
+              })}
+            </dl>
+          );
+        })}
         <i></i>
         <i></i>
         <i></i>

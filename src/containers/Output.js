@@ -81,7 +81,8 @@ const StyledWrapper = styled.section`
   }
 `;
 
-const Output = ({ pwd, updatePwd, length }) => {
+const Output = ({ pwd, updatePwd, length, pwdLevelTip }) => {
+  const { bad, weak, strong, veryStrong } = pwdLevelTip;
   const { isMobile } = useMobile();
   const [copied, setCopied] = useState(false);
   const [updated, setUpdated] = useState(false);
@@ -118,13 +119,13 @@ const Output = ({ pwd, updatePwd, length }) => {
         </div>
       </div>
       {length < 6 ? (
-        <i className="tip bad">bad password</i>
+        <i className="tip bad">{bad}</i>
       ) : length < 11 ? (
-        <i className="tip weak">weak password</i>
+        <i className="tip weak">{weak}</i>
       ) : length < 15 ? (
-        <i className="tip strong">strong password</i>
+        <i className="tip strong">{strong}</i>
       ) : (
-        <i className="tip strong">very strong password</i>
+        <i className="tip strong">{veryStrong}</i>
       )}
     </StyledWrapper>
   );

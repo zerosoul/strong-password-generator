@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from '../assets/img/icon.png';
+
 const Wrapper = styled.header`
   position: relative;
   overflow: hidden;
@@ -23,6 +24,11 @@ const Wrapper = styled.header`
     font-weight: 800;
     text-transform: uppercase;
     text-shadow: 0 0 6px #9e9e9e;
+  }
+  .lang {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
   }
   .ribbon-wrapper {
     width: 94px;
@@ -47,13 +53,28 @@ const Wrapper = styled.header`
     }
   }
 `;
-export default function Header() {
+export default function Header({ title, langName, changeLang }) {
+  const handleLangChange = ({ target: { value } }) => {
+    console.log('wwww', value);
+    changeLang(value);
+  };
   return (
     <Wrapper>
       <img className="logo" src={Logo} alt="logo" />
-      <h1>strong passwords generator</h1>
+      <h1>{title}</h1>
       <div className="ribbon-wrapper">
         <div className="ribbon">ONLINE</div>
+      </div>
+      <div className="lang">
+        <select value={langName} onChange={handleLangChange}>
+          {[{ value: 'en', title: 'English' }, { value: 'zh', title: '中文' }].map(item => {
+            return (
+              <option key={item.value} value={item.value}>
+                {item.title}
+              </option>
+            );
+          })}
+        </select>
       </div>
     </Wrapper>
   );

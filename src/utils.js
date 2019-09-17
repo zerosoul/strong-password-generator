@@ -16,4 +16,3 @@ export const getPwd = (length = 4, { letter, number, symbol, uppercase, excludeS
   }
   return cryptoRandomString({ length, characters });
 };
-// export { getPwd };
