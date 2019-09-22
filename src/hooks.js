@@ -3,14 +3,17 @@ import { getPwd } from './utils';
 import Lang from './assets/lang.json';
 
 const useLanguage = () => {
-  const isEN = navigator.language.indexOf('en') > -1;
-  const [lang, setLang] = useState(isEN ? Lang.en : Lang.zh);
+  let localLangKey = localStorage.getItem('LANG') || '';
+  localLangKey = localLangKey ? localLangKey : navigator.language.indexOf('en') > -1 ? 'en' : 'zh';
+
+  const [lang, setLang] = useState(Lang[localLangKey]);
   const changeLang = val => {
     if (val == 'en') {
       setLang(Lang.en);
     } else {
       setLang(Lang.zh);
     }
+    localStorage.setItem('LANG', val);
   };
   return { lang, changeLang };
 };
