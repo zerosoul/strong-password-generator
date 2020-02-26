@@ -86,6 +86,11 @@ export default function Footer({ arts }) {
           Checkout the source on{' '}
           <a href="//github.com/zerosoul/strong-password-generator">Github</a>
         </span>
+        <span>
+          <a rel="noopener noreferrer" target="_blank" href="http://www.beian.miit.gov.cn/">
+            京ICP备16015459号-1
+          </a>
+        </span>
       </div>
     </Wrapper>
   );
