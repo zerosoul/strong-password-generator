@@ -38,28 +38,6 @@ const Wrapper = styled.header`
       text-align-last: center;
     }
   }
-  .ribbon-wrapper {
-    width: 94px;
-    height: 88px;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    .ribbon {
-      text-align: center;
-      position: relative;
-      padding: 8px 0;
-      transform: rotate(-45deg);
-      font-size: 0.6rem;
-      font-weight: 800;
-      top: 15px;
-      left: -30px;
-      width: 120px;
-      background-color: #318800;
-      color: #fff;
-      box-shadow: 1px 1px 14px 0px #174007;
-    }
-  }
 `;
 export default function Header({ title, langName, changeLang }) {
   const handleLangChange = ({ target: { value } }) => {
@@ -70,12 +48,12 @@ export default function Header({ title, langName, changeLang }) {
     <Wrapper>
       <img className="logo" src={Logo} alt="logo" />
       <h1>{title}</h1>
-      <div className="ribbon-wrapper">
-        <div className="ribbon">ONLINE</div>
-      </div>
       <div className="lang">
         <select value={langName} onChange={handleLangChange}>
-          {[{ value: 'en', title: 'English' }, { value: 'zh', title: '中文' }].map(item => {
+          {[
+            { value: 'en', title: 'English' },
+            { value: 'zh', title: '中文' }
+          ].map((item) => {
             return (
               <option key={item.value} value={item.value}>
                 {item.title}

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -22,16 +20,13 @@ const Wrapper = styled.div`
       background: #2196f3;
       cursor: pointer;
       transition: background 0.15s ease-in-out;
-
       &:hover {
         background: #219699;
       }
     }
-
     &:active::-webkit-slider-thumb {
       background: #219699;
     }
-
     &:range-thumb {
       width: 20px;
       height: 20px;
@@ -45,7 +40,6 @@ const Wrapper = styled.div`
         background: #219699;
       }
     }
-
     &:active:range-thumb {
       background: #219699;
     }

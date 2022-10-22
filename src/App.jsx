@@ -10,7 +10,7 @@ const App = () => {
   const { currPwd, updateOpts, updatePwd, currOpts } = usePwd();
   const { lang, changeLang } = useLanguage();
   return (
-    <>
+    <main style={{ maxWidth: '2000px', margin: 'auto' }}>
       <Header title={lang.title} langName={lang.name} changeLang={changeLang} />
       <Output
         pwd={currPwd}
@@ -20,7 +20,7 @@ const App = () => {
       />
       <Dashboard {...currOpts} updateOpts={updateOpts} optsTxt={lang.opts} />
       <Footer arts={lang.footer} />
-    </>
+    </main>
   );
 };
 export default App;

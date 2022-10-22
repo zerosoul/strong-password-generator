@@ -7,7 +7,7 @@ const StyledWrapper = styled.section`
   flex-direction: column;
   background: #fff;
   padding: 2rem 7rem;
-  box-shadow: 0px 7px 15px 1px #0b210a;
+  box-shadow: 0 7px 15px 1px #0b210a;
   &.mobile {
     padding: 2rem;
   }

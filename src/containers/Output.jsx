@@ -26,12 +26,16 @@ const StyledWrapper = styled.section`
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      border-bottom: none;
+    }
 
     .output {
       color: #fff;
       font-weight: 800;
-      font-size: 1.8rem;
-      font-size: 4.8vw;
+      font-size: 1.6rem;
+      /* font-size: 2vw; */
       line-height: 1.2;
       padding: 0.3rem 0;
       word-break: break-all;
@@ -57,6 +61,9 @@ const StyledWrapper = styled.section`
     position: relative;
     color: #fff;
     font-size: 0.8rem;
+    @media screen and (max-width: 768px) {
+      margin: auto;
+    }
     &:before {
       content: '!';
       position: absolute;

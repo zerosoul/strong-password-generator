@@ -50,7 +50,6 @@ const Wrapper = styled.footer`
     span {
       color: #ccc;
       margin: 0 0.4rem;
-
       a {
         color: #ddd;
       }
@@ -61,11 +60,11 @@ export default function Footer({ arts }) {
   return (
     <Wrapper>
       <div className="dls">
-        {arts.map(art => {
+        {arts.map((art) => {
           return (
             <dl key={art.title}>
               <dt>{art.title}</dt>
-              {art.list.map(item => {
+              {art.list.map((item) => {
                 return <dd key={item}>{item}</dd>;
               })}
             </dl>
