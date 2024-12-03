@@ -29,17 +29,17 @@
   "bugs": {
     "url": "https://github.com/zerosoul/strong-password-generator/issues"
   },
-  "homepage": "https://works.yangerxiao.com/strong-password-generator/",
+  "homepage": "https://pwd-gen.yangerxiao.com/",
   "dependencies": {
-    "copy-to-clipboard": "^3.3.2",
+    "copy-to-clipboard": "^3.3.3",
     "crypto-random-string": "^5.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-components": "^5.3.6",
-    "styled-reset": "^4.4.2"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.1.13",
+    "styled-reset": "^4.5.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^2.1.0",
+    "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.31.10",
@@ -47,7 +47,7 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
-    "vite": "^3.1.8"
+    "vite": "^6.0.2"
   },
   "browserslist": {
     "production": [
